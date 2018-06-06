@@ -17,11 +17,19 @@ img{
   margin-left: 25%;
   margin-right: 25%;
 }
+form.deleteform{
+text-align: center;
+margin-top: 25%;
+margin-bottom: 25%;
+margin-left: 25%;
+margin-right: 25%;
+padding-right: 5%;
+height: 50%;
+width: 50%;
 
 }
 
 
-}
 .post-form{
   font-size-adjust: 500px;
   padding-left: 300px;
@@ -176,13 +184,14 @@ text-align: center;
 width: 50%;
 left: 50%;
 right: 50%;
+height: 60%;
 margin-left: 25%;
 margin-right: 25%;
 }
 .jumbodetail .jumbotron{
   width: 63%;
   height: 50%;
-  margin-top: 5%;
+  margin-top: 6%;
   padding-top: 5%;
   margin-left: 19.5%;
   padding-left: 10%;

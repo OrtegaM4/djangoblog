@@ -1,11 +1,15 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<div class="jumbotron">
-<form  method="POST">
-  {%csrf_token%}
-  <p>Are you sure you want to delete {{object}}?</p>
-  <input type="submit"class='btn btn-danger' value="Delete">
+<div class="deletesection">
 
-</form>
+  <div class="jumbotron">
+    <form  class='deleteform'method="POST">
+      {%csrf_token%}
+      <p>Are you sure you want to delete {{object}}?</p>
+      <input type="submit"class='btn btn-danger' value="Delete">
+      <a class="btn btn-warning"href="{% url 'post_detail' pk=post.pk %}">Cancel</a>
+
+    </form>
+  </div>
 </div>
 {% endblock %}
