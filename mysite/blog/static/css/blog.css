@@ -12,11 +12,34 @@ body h1{
   color: white;
 }
 img{
-  opacity: 0.3;
-  width: 50%;
+  width: 55%;
   margin-left: 25%;
   margin-right: 25%;
 }
+.content-wrapper{
+  margin-bottom: 20%;
+}
+.content-wrapper img {
+  width: 55%;
+  height: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  position: static;
+}
+.content-wrapper  h1{
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: -20%;
+  text-align: center;
+}
+
+
+
+
+/* The Delete Form's jumbotron*/
 form.deleteform{
 text-align: center;
 margin-top: 25%;
@@ -26,10 +49,9 @@ margin-right: 25%;
 padding-right: 5%;
 height: 50%;
 width: 50%;
-
 }
 
-
+/*The For To Create New Post*/
 .post-form{
   font-size-adjust: 500px;
   padding-left: 300px;
@@ -54,15 +76,11 @@ width: 50%;
   background-blend-mode: lighten;
   padding-bottom:  0px;
   background-color: black;
-
-
 }
-
 .post a {
   text-align: center;
 }
 
-}
 /* All links in container*/
 .container .post a{
   position: center;
