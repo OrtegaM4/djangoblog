@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load tz %}
+  {{value|localtime}}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> My Home Page</title>
+    <!-- #BootStrap, Medimum Style Editor, Custom CSS, Google Fonts -->
+
+    <head>
+        <title>Blog Project</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        {# MEDIUM STYLE EDITOR#}
+        <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+
+        {# Custom CSS#}
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+<body>
+<!--- navbar -->
+  <nav id='navbar1'class='navbar  navbar-default navbar-fixed-top techfont '>
+
+    <div id='postcont'class="container">
+      <ul class='nav navbar-nav navbar-left'>
+        <li> <a class='navbar-brand bigbrand'href="{% url 'post_list' %}">Home </a></li>
+        <li><a href="{% url 'post_about'%}">About</a></li>
+        <li><a href="{% url 'post_about'%}">Contact Me</a></li>
+        <li> <a href="https://github.com/OrtegaM4">GitHub</a></li>
+  <!-- if the user is signed in this will be displayed on the nav -->
+        {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'post_new' %}"> New Post</a>
+        </li>
+        <li>
+          <a href="{% url 'post_draft_list' %}">Drafts</a>
+        </li>
+        <li>
+          <a id='loginbtn'href="{% url 'logout' %}?next={% url 'post_list'%}"> Logout</a>
+        </li>
+        <li>
+          <a>Welcome {{user.username}}</a>
+        </li>
+  <!-- If the user if not signed in this nav will be displayed-->
+        {%else%}
+        <li>
+          <a class='nav navbar-nav navbar-right'href="{%url 'login'%}">Login</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+      {% block content %}
+      {% endblock %}
+
+
+    </body>
+  </html>

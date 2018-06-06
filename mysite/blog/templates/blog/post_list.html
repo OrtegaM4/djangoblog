@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+
+
+
+
+<img class ='imgheader'src="https://images.pexels.com/photos/810890/nature-night-sky-milky-way-810890.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Not Found">
+  <h1 class="main-title">Welcome To My <span class="thin">Blog</span></h1>
+
+
+
+<h1>Published Post:</h1>
+    {% for post in post_list %}
+
+        <div class="post">
+
+            <h1><a id='titleofpost'href="{% url 'post_detail' pk=post.pk %}"><strong>{{ post.title }}</strong></a></h1>
+            <div class="date">
+                <p>Published on: {{ post.publish_date|date:"D M Y"}}</p>
+            </div>
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments:{{ comment.text }} </a>
+
+            {% for comment in post.comments.all %}
+            <br>
+                {% if user.is_authenticated or comment.approved_comment %}
+
+                        {{ comment.created_date }}
+                    <p>{{ comment.text|safe|linebreaks }}</p>
+                    <p>Posted by: <strong>{{ comment.author }}</strong></p>
+
+                {% endif %}
+            {% empty %}
+                <p>No comments posted.</p>
+            {% endfor %}
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
