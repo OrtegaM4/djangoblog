@@ -83,6 +83,7 @@ form.form-group{
   background-blend-mode: lighten;
   padding-bottom:  0px;
   background-color: black;
+  color: white;
 }
 .post a {
   text-align: center;

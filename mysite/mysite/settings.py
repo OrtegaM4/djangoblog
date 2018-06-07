@@ -27,7 +27,7 @@ SECRET_KEY = ')*_e750em3uy4n!p5@68^gf7owis97ta9e02_x)f&&%qhe0_bx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ortegam4.pythonanywhere.com']
+ALLOWED_HOSTS = ['ortegam4.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
