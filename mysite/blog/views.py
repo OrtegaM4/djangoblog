@@ -12,6 +12,9 @@ from django.views.generic import (TemplateView, CreateView, DetailView, DeleteVi
 class AboutView(TemplateView):
     template_name = "about.html"
 
+class ContactView(TemplateView):
+    template_name = "contact.html"
+
 class PostListView(ListView):
     model = Post
 

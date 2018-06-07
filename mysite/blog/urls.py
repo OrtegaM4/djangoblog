@@ -2,11 +2,12 @@ from django.contrib import admin
 from django.urls import path, include
 from blog import views
 from django.conf.urls import url
-from blog.views import AboutView
+from blog.views import AboutView,ContactView
 
 urlpatterns = [
     path ('',views.PostListView.as_view(), name='post_list'),
     path ('about/', AboutView.as_view(),name='post_about'),
+    path ('contact/', ContactView.as_view(),name='post_contact'),
     path ('post/<int:pk>',views.PostDetailView.as_view(), name='post_detail'),
     path ('post/new/',views.PostCreateView.as_view(), name='post_new'),
     path ('post/<int:pk>/edit/', views.PostUpdateView.as_view(), name= 'post_edit'),

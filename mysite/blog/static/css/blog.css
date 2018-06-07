@@ -35,7 +35,12 @@ img{
   margin-top: -20%;
   text-align: center;
 }
-
+ div.jumbotron h1 .Newpost{
+  text-align: center;
+  margin-top: 25%;
+  padding-top: 25%;
+  padding-left: 25%;
+}
 
 
 
@@ -50,7 +55,9 @@ padding-right: 5%;
 height: 50%;
 width: 50%;
 }
-
+form.form-group{
+  padding-left: 5%;
+}
 /*The For To Create New Post*/
 .post-form{
   font-size-adjust: 500px;
@@ -90,7 +97,7 @@ width: 50%;
   margin: auto;
   padding: auto;
 }
-  .container .post p {
+.container .post p {
     position: center;
 }
 /* Home page title */
@@ -185,9 +192,8 @@ text-align: center;
 }
 .jumbotron h1{
   padding-right: 10px;
-  width: 50%;
   margin-top: 0;
-  padding-top: 0%;
+  padding-top: 5%;
   margin-bottom: 20%;
   background-attachment: fixed;
   background-position: center;
@@ -199,22 +205,23 @@ text-align: center;
   color: black;
 }
 .jumbotron{
-width: 50%;
+width: 60%;
 left: 50%;
 right: 50%;
 height: 60%;
-margin-left: 25%;
+margin-left: 20%;
 margin-right: 25%;
+padding-top: 5%;
 }
 .jumbodetail .jumbotron{
-  width: 63%;
+  width: 50%;
   height: 50%;
   margin-top: 6%;
-  padding-top: 5%;
-  margin-left: 19.5%;
-  padding-left: 10%;
-  margin-right: 25%;
-  padding-right: 0%;
+  padding-top: 10%;
+  margin-left: 25%;
+  padding-left: 5%;
+  margin-right: 28%;
+  padding-right: 10%;
   margin-bottom: 0%;
   padding-bottom: 10%;
   text-align:bottom left;
@@ -224,11 +231,7 @@ margin-right: 25%;
     padding-left: 5%;
     text-align: center;
 
-#Newpost{
-  text-align: center;
-  font-style: oblique;
-  padding-bottom: 100px;
-}
+
   .container .main-title {
 	position: relative;
 	margin: 0;
