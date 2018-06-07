@@ -15,6 +15,7 @@ img{
   width: 55%;
   margin-left: 25%;
   margin-right: 25%;
+  opacity: 0.0;
 }
 .content-wrapper{
   margin-bottom: 20%;
