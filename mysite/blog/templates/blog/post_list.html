@@ -21,7 +21,7 @@
 
             <h1><a id='titleofpost'href="{% url 'post_detail' pk=post.pk %}"><strong>{{ post.title }}</strong></a></h1>
             <div class="date">
-                <p>Published on: {{ post.publish_date|date:"D M Y"}}</p>
+                <p>Published on: {{ post.publish_date}}</p>
             </div>
             <a href="{% url 'post_detail' pk=post.pk %}">Comments:{{ comment.text }} </a>
 
