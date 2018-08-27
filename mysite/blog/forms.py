@@ -1,4 +1,5 @@
 from django import forms
+from django.db import models
 
 from .models import Post, Comment
 
@@ -13,6 +14,9 @@ class PostForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'textinputclass'}),
             'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea postcontent'}),
         }
+        def __init__(self, *args, **kwargs):
+            super(PostForm, self).__init__(*args, **kwargs)
+            self.fields['author'].required = False
 
 
 class CommentForm(forms.ModelForm):
